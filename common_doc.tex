@@ -1,0 +1,65 @@
+% LaTeX Common Config file
+% Copyright (c) 2025 Mariusz Matusiak <mariusz.m.matusiak@gmail.com>
+% File: common_doc.tex
+
+\documentclass[12pt,a4paper,onecolumn]{article}
+
+\input{common_cfg}
+
+\title{Test config / Konfiguracja testowa}
+\author{Mariusz Matusiak}
+\date{\today}
+
+\ifx\UseBibLaTeX\undefined
+\else
+    \addbibresource{mybibliography.bib}
+\fi
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+    Used for testing \LaTeX{} setup and enable \emph{required packages}. 
+\end{abstract}
+
+\part{Tom 1}
+O tym gdy OCD wchodzi Ci na głowę
+
+\begin{comment}
+\chapter{Rozdział 1} % for book
+\end{comment}
+
+\section{Sekcja 1}
+
+\paragraph{And also as a template for other docs.}
+
+\begin{equation}
+    y = \frac{d_1}{d_2}
+\end{equation}
+
+\section{Summary}
+\label{sec:summary}
+
+\begin{equation}
+    \mathrm{default font} = \mathbf{bolded expression} + \mathcal{A} + \mathbb{A} + \text{regular text}
+\end{equation}
+
+Example cytowanko goes here \cite{Adamski2014}.
+
+\texttt{Zażółć} \textbf{gęślą} \textsc{jaźń}!!
+
+Perhaps I will share you my story someday...
+
+\appendix \section{Dobre rady} \ref{sec:summary}
+
+\ifx\UseBibLaTeX\undefined
+    \bibliographystyle{plain}
+    \bibliography{mybibliography}
+\else
+    \printbibliography{}
+\fi
+
+\tableofcontents
+
+\end{document}
