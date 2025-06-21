@@ -1,0 +1,91 @@
+
+% \documentclass{report}
+\documentclass[12pt,a4paper,onecolumn]{article}
+% \documentclass{book}
+% \documentclass[letterpaper]{letter}
+% \documentclass[landscape]{memoir}
+
+\usepackage[left=2cm,top=2cm,right=2cm,bottom=2cm]{geometry} % to modify alignment
+% \usepackage{polski}             % to use Polish encoding on input or:
+\usepackage[polish,english]{babel}    % to use Polish + english encoding (last one is default) on input together, and switch using \selectlanguage{language} with vocab, interpunction and syntax
+\usepackage[utf8]{inputenc}     % to configure Unicode text encoding on input as UTF-8
+% \usepackage[macce]{inputenc}    % to configure Unicode text encoding on input as UTF-8 on Mac (not working well)
+% \usepackage[latin2]{inputenc} % to configure Unicode text encoding on input as UTF-8 on Linux
+% \usepackage[cp1250]{inputenc} % to configure Unicode text encoding on input as UTF-8 on Windows
+\usepackage[T1]{fontenc}        % to configure UTF-8 characters rendering on output
+\usepackage{comment}    % to enable comments like \begin{comment}...\end{comment
+\usepackage{graphicx}   % to insert images
+\usepackage[]{tabularx}
+\usepackage[unicode]{hyperref}  % to insert bookmarks with polish letters
+% \usepackage[hidelinks]{hyperref}    % to hide links frame
+\usepackage{amsmath}    % to enable math formulas (incl. polish language), put after lang!
+\usepackage{amssymb}    % to enable math symbols (incl. polish language)
+\usepackage{amsfonts}   % to enable math fonts (incl. polish language)
+\usepackage{pdfpages}   % to embed other docs
+\newcommand\UseBibLaTeX{}  % comment this out if you want to use classic BibTeX instead of BibLaTeX
+\ifx\UseBibLaTeX\undefined
+\else
+    \usepackage[backend=biber,defernumbers=true,sorting=ydnt]{biblatex} % to use biber with BibLaTeX instead of default BibTeX
+\fi
+\usepackage{csquotes}   % a recommended package when babel is used with BibLaTeX
+\usepackage{enumitem}   % to customize item list further, not necessary
+
+% \textit{\ifx\positionLocation\undefined Willing to relocate. \else Willing to relocate to \positionLocation{} for the \positionName{} role.\fi}
+
+\title{Test config / Konfiguracja testowa}
+\author{Mariusz Matusiak}
+\date{\today}
+
+\ifx\UseBibLaTeX\undefined
+\else
+    \addbibresource{mybibliography.bib}
+\fi
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+    Used for testing \LaTeX{} setup and enable \emph{required packages}. 
+\end{abstract}
+
+\part{Tom 1}
+O tym gdy OCD wchodzi Ci na głowę
+
+\begin{comment}
+    \chapter{Rozdział 1}
+\end{comment}
+
+\section{Sekcja 1}
+
+\paragraph{And also as a template for other docs.}
+
+\begin{equation}
+    y = \frac{d_1}{d_2}
+\end{equation}
+
+\section{Summary}
+\label{sec:summary}
+
+\begin{equation}
+    \mathrm{default font} = \mathbf{bolded expression} + \mathcal{A} + \mathbb{A} + \text{regular text}
+\end{equation}
+
+Example cytowanko goes here \cite{Adamski2014}.
+
+\texttt{Zażółć} \textbf{gęślą} \textsc{jaźń}!!
+
+Perhaps I will share you my story someday...
+
+\appendix \section{Dobre rady} \ref{sec:summary}
+
+\ifx\UseBibLaTeX\undefined
+    \bibliographystyle{plain}
+    \bibliography{mybibliography}
+\else
+    \printbibliography{}
+\fi
+
+\tableofcontents
+
+\end{document}
