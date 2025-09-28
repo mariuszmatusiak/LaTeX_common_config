@@ -8,6 +8,7 @@
 % \documentclass[letterpaper]{letter}
 % \documentclass[landscape]{memoir}
 \usepackage[left=2cm,top=2cm,right=2cm,bottom=2cm]{geometry} % to modify alignment
+\usepackage{amssymb}	            % to enable math symbols (on Linux this should go before babel due to lll issue)
 % \usepackage{polski}               % to use Polish encoding on input or:
 \usepackage[polish,english]{babel}  % to use Polish + english encoding (last one is default) on input together, and switch using \selectlanguage{language} with vocab, interpunction and syntax
 \usepackage[utf8]{inputenc}         % to configure Unicode text encoding on input as UTF-8
@@ -21,7 +22,7 @@
 \usepackage[unicode]{hyperref}      % to insert bookmarks with polish letters
 % \usepackage[hidelinks]{hyperref}  % to hide links frame
 \usepackage{amsmath}                % to enable math formulas (incl. polish language), put after lang!
-\usepackage{amssymb}                % to enable math symbols (incl. polish language)
+% \usepackage{amssymb}                % to enable math symbols (incl. polish language)
 \usepackage{amsfonts}               % to enable math fonts (incl. polish language)
 \usepackage{pdfpages}               % to embed other docs
 \newcommand\UseBibLaTeX{}           % comment this out if you want to use classic BibTeX instead of BibLaTeX
