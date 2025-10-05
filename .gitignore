@@ -321,3 +321,5 @@ TSWLatexianTemp*
 
 output_
 .DS_Store
+
+common_doc*.pdf
