@@ -1,12 +1,30 @@
 % LaTeX Common Config file
 % Copyright (c) 2025 Mariusz Matusiak <mariusz.m.matusiak@gmail.com>
 % File: mybibliography.bib
-@book{Adamski2014,
-  title = {Podstawy {{MATLABa}} w Inżynierii Procesowej},
-  author = {Adamski, Robert and Pakowski, Zdzisław},
-  date = {2014},
-  publisher = {Wydawnictwo Politechniki Łódzkiej},
-  location = {Lodz},
-  isbn = {978-83-7283-630-4},
-  file = {/Users/mariusz/Library/CloudStorage/OneDrive-Personal/Readings/Programming Guides/MATLAB/Podstawy MATLABa w inżynierii procesowej - Adamski and Pakowski, 2014.pdf}
+
+@software{Matusiak2020b,
+	location = {GitHub},
+	title = {LaTeX Common Config},
+	% rights = {All rights reserved},
+	url = {https://github.com/mariuszmatusiak/LaTeX_common_config},
+	author = {Matusiak, Mariusz},
+	% urldate = {2020-08-07},
+	date = {2025},
+}
+
+@incollection{Matusiak2020m,
+	% location = {Cham},
+	title = {Fast Evaluation of {Grünwald-Letnikov} Variable Fractional-Order Differentiation and Integration Based on the {FFT} Convolution},
+	% rights = {All rights reserved},
+	% isbn = {978-3-030-50936-1},
+	url = {http://link.springer.com/10.1007/978-3-030-50936-1_74},
+	abstract = {The main topic of this research is the development of a new efficient method for solving fractional differential equations in the time domain using the Grünwald-Letnikov ({GL}) definition of the differintegral operator. The goal is to reduce or, in some cases, eliminate the necessity of introducing the maximum number of samples of the approximation, which is always a trade-off between accuracy, memory consumption, and computational speed. The algorithm involving Fast Fourier Transform and Fast Convolution operations has been proposed. The implementation in two different environments - the {MATLAB}/Simulink on a {PC} and on a hardware platform with the {STM}32H743 microcontroller - is described in this paper and the results of two iterations of experiments are presented. Fast Convolution algorithm is proven to be highly effective for processing block lengths \$\$N {\textbackslash}ge 128\$\$. In the most complex analyzed case (\$\$N=8192\$\$ samples) on the Intel\$\${\textbackslash}textregistered \$\$ Core\$\${\textasciicircum}{\textbackslash}mathrm\{{TM}\}\$\$ i5-8250U {CPU} reduction of the computation time reached \$\$85{\textbackslash}\%\$\$, compared to the implementation of the classic definition characterized by the \$\${\textbackslash}mathcal \{O\}(N{\textasciicircum}2)\$\$ complexity.},
+	pages = {879--890},
+	booktitle = {Advanced, Contemporary Control. Advances in Intelligent Systems and Computing, vol 1196},
+	% publisher = {Springer International Publishing},
+	author = {Matusiak, Mariusz},
+	editor = {Bartoszewicz, Andrzej and Kabziński, Jacek and Kacprzyk, Janusz},
+	date = {2020},
+	doi = {10.1007/978-3-030-50936-1_74},
+	keywords = {Arm® Cortex-M7, Fast Convolution, Fast Fourier Transform, Fractional-order calculus, Grünwald-Letnikov {VFOD}/I, Microcontroller implementation, cv_selected},
 }

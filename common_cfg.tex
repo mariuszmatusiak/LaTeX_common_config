@@ -7,9 +7,10 @@
 % \documentclass{book}
 % \documentclass[letterpaper]{letter}
 % \documentclass[landscape]{memoir}
-\usepackage[left=2cm,top=2cm,right=2cm,bottom=2cm]{geometry} % to modify alignment
+
+% \usepackage[left=2cm,top=2cm,right=2cm,bottom=2cm]{geometry}  % to modify alignment and margins
 \usepackage{amssymb}	            % to enable math symbols (on Linux this should go before babel due to lll issue)
-% \usepackage{polski}               % to use Polish encoding on input or:
+% \usepackage{polski}               % to use Polish encoding on input. Changes "Chapter" to "Rozdział". Or:
 \usepackage[polish,english]{babel}  % to use Polish + english encoding (last one is default) on input together, and switch using \selectlanguage{language} with vocab, interpunction and syntax
 \usepackage[utf8]{inputenc}         % to configure Unicode text encoding on input as UTF-8
 % \usepackage[macce]{inputenc}      % to configure Unicode text encoding on input as UTF-8 on Mac (not working well)
@@ -17,18 +18,42 @@
 % \usepackage[cp1250]{inputenc}     % to configure Unicode text encoding on input as UTF-8 on Windows
 \usepackage[T1]{fontenc}            % to configure UTF-8 characters rendering on output
 \usepackage{comment}                % to enable comments like \begin{comment}...\end{comment
-\usepackage{graphicx}               % to insert images
-\usepackage[]{tabularx}
-\usepackage[unicode]{hyperref}      % to insert bookmarks with polish letters
+\usepackage{graphicx}               % to insert images, with rotating and scaling
+\usepackage{tabularx}               % to enable tables
+\usepackage{multicol}               % to enable multi-column span
+\usepackage{multirow}               % to enable multi-row span
+\usepackage[unicode,breaklinks,hidelinks]{hyperref}      % to insert bookmarks with polish letters
 % \usepackage[hidelinks]{hyperref}  % to hide links frame
 \usepackage{amsmath}                % to enable math formulas (incl. polish language), put after lang!
 % \usepackage{amssymb}                % to enable math symbols (incl. polish language)
 \usepackage{amsfonts}               % to enable math fonts (incl. polish language)
-\usepackage{pdfpages}               % to embed other docs
+\usepackage{pdfpages}               % to embed other docs/pdf into one pdf
 \newcommand\UseBibLaTeX{}           % comment this out if you want to use classic BibTeX instead of BibLaTeX
 \ifx\UseBibLaTeX\undefined
 \else
-    \usepackage[backend=biber,defernumbers=true,sorting=ydnt]{biblatex} % to use biber with BibLaTeX instead of default BibTeX
+    \usepackage[backend=biber,defernumbers=true,sorting=ydnt,style=nature]{biblatex} % to use biber with BibLaTeX instead of default BibTeX
 \fi
 \usepackage{csquotes}               % a recommended package when babel is used with BibLaTeX
-\usepackage{enumitem}               % to customize item list further, not necessary
+\usepackage{enumitem}               % to customize item list further, not necessary. TODO check if I really need this
+% \usepackage[acronym, toc, nogroupskip]{glossaries} % to enable creating glossaries with \makeglossaries and \printglossaries, to be loaded after hyperref
+\usepackage[style=indexgroup,abbreviations,postdot,symbols,translate=babel]{glossaries-extra}      % to enable creating glossaries with additional options
+\usepackage{makeidx}                % to enable creating index of keywords with \makeindex and \printindex 
+\usepackage{IEEEtrantools}          % to enable IEEEeqnarray, TODO check if I really need this
+% \usepackage[justification=centering]{caption} % to enable captions. TODO
+\usepackage[style=base]{subcaption} % to enable and use subfloat and subfigures.  
+% \usepackage[caption=false,justification=centering]{subfig}  % to enable and use subfloat and subfigures. Marked as deprecated. Do the same as above subcaption. Use the above only.
+% \usepackage{type1cm}              % to change sizes of AMS fonts. Not needed now.
+% \usepackage[titletoc]{appendix}     % package for appendix (titletoc adds \appendixname in toc)
+\usepackage{listings}               % to enable code snippets
+
+% A set of additional unicode character declarations
+\DeclareUnicodeCharacter{03BB}{$\lambda$}  % λ (U+03BB)
+\DeclareUnicodeCharacter{03BC}{$\mu$} % μ (U+03BC)
+
+% Glossaries-extra useful commands:
+% - for section, headers and captions - \glsfmtshort{}
+% - for text - \gls{}
+
+% Math mode useful commands:
+% - normal text in math mode - \textrm{}
+% - italic text in math mode - \mathit{}
