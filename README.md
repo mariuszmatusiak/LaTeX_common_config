@@ -1,4 +1,5 @@
 # LaTeX common config
-My personal common config for LaTeX documents
 
-Copyright (c) 2025 Mariusz Matusiak <mariusz.m.matusiak@gmail.com>
+My personal config for the LaTeX documents.
+
+Copyright (c) 2026 Mariusz Matusiak <coffeedrivenengineer@gmail.com>

@@ -322,4 +322,6 @@ TSWLatexianTemp*
 output_
 .DS_Store
 
+.vscode/
+
 common_doc*.pdf

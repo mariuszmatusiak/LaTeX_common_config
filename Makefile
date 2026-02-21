@@ -2,7 +2,7 @@
 # Test your LaTeX environment with this simple build command.
 # If it passes, then you are mostly good to go!
 #
-# Copyright (C) 2025 Mariusz Matusiak <matusiakmariusz@icloud.com>
+# Copyright (C) 2026 Mariusz Matusiak <coffeedrivenengineer@gmail.com>
 #
 # Prerequisites:
 # - texlive distribution installed - the newer, the better
@@ -11,6 +11,7 @@
 
 # Modify this line if you don't have latexmk in your PATH:
 latexbin=latexmk
+# Additional LaTeX options - generate PDF, use output_ as the output directory, and change dir when needed
 latexopt=-pdf -outdir=output_ -cd
 src=$(wildcard *.tex)
 timestamp=`date +%Y%m%d`
